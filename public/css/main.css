@@ -1,0 +1,1124 @@
+@import"https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&display=swap";
+
+* {
+    box-sizing: border-box;
+    font-family: "Chau Philomene One", sans-serif !important
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: calc(16px + 5*(100vw - 320px)/1600)
+}
+
+.nav-section {
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0px 20px;
+    z-index: 9;
+    border-bottom: 1px solid #d3d3d3
+}
+
+.nav-section .grid {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center
+}
+
+@media screen and (max-width: 768px) {
+    .nav-section .grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+.nav-section .grid .col .logo {
+    font-size: 30px;
+    color: #222
+}
+
+@media screen and (max-width: 768px) {
+    .nav-section .grid .col:nth-child(2) {
+        display: none
+    }
+}
+
+.nav-section .grid .col .inline {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 20px
+}
+
+.nav-section .grid .col .inline a {
+    font-size: 21px;
+    color: #222
+}
+
+.nav-section .grid .col:nth-child(3) .inline {
+    justify-content: flex-end
+}
+
+.hero-section {
+    width: 100%;
+    height: calc(100vh - 80px);
+    margin-top: 80px
+}
+
+@media screen and (max-width: 1024px) {
+    .hero-section {
+        height: calc(60vh - 60px)
+    }
+}
+
+.hero-section .grid {
+    height: 100%
+}
+
+.hero-section .grid .col {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%
+}
+
+.hero-section .grid .col .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1
+}
+
+.hero-section .grid .col .img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.hero-section .grid .col .text-block {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #fff
+}
+
+.hero-section .grid .col .text-block .m-title {
+    font-size: 25px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 0px
+}
+
+.hero-section .grid .col .text-block .title {
+    font-size: calc(35px + 30*(100vw - 320px)/1600)
+}
+
+.hero-section .grid .col::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgba(34, 34, 34, .5254901961)
+}
+
+.food-section {
+    width: 100%;
+    padding: 50px 20px
+}
+
+@media screen and (max-width: 1024px) {
+    .food-section {
+        padding-top: 0px
+    }
+}
+
+.food-section .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: center
+}
+
+.food-section .grid.product {
+    align-items: flex-start
+}
+
+@media screen and (max-width: 1024px) {
+    .food-section .grid {
+        grid-template-columns: 1fr
+    }
+}
+
+.food-section .grid .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px
+}
+
+@media screen and (max-width: 1400px) {
+    .food-section .grid .grid-4 {
+        grid-template-columns: repeat(3, 1fr)
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .food-section .grid .grid-4 {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .food-section .grid .grid-4 {
+        grid-template-columns: 1fr
+    }
+}
+
+.food-section .grid .col:first-child {
+    text-align: center
+}
+
+.food-section .grid .col .card {
+    display: flex;
+    flex-direction: column;
+    color: #222;
+    text-decoration: none;
+    border: 1px solid #222;
+    padding: 10px
+}
+
+.food-section .grid .col .card .img {
+    width: 100%;
+    height: 100%
+}
+
+.food-section .grid .col .card .img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.food-section .grid .col .card .text-block {
+    padding-top: calc(20px + 10*(100vw - 320px)/1600)
+}
+
+.food-section .grid .col .card .text-block .title {
+    font-size: calc(25px + 20*(100vw - 320px)/1600);
+    margin-top: 0px;
+    margin-bottom: 0px
+}
+
+.food-section .grid .col .card .text-block .m-title {
+    font-size: calc(25px + 15*(100vw - 320px)/1600);
+    margin-bottom: 5px;
+    text-align: center
+}
+
+.food-section .grid .col .card .text-block .text {
+    font-size: 25px;
+    text-align: center;
+    line-height: 1.5
+}
+
+.food-section .grid .col .card .text-block .text.text-left {
+    text-align: left
+}
+
+.food-section .grid .col .card .offer-block {
+    background: #222;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    text-align: left;
+    padding: 10px
+}
+
+.food-section .grid .col .card .btn-inline {
+    display: flex
+}
+
+.food-section .grid .col .card .btn-inline a {
+    padding: 15px 20px;
+    flex-basis: 50%;
+    font-size: 21px;
+    border: 1px solid #222;
+    text-align: center;
+    text-transform: capitalize;
+    color: #222
+}
+
+.food-section .grid .col .card .btn-block {
+    display: inline-block
+}
+
+.food-section .grid .col .card .btn-block .btn {
+    font-size: #222;
+    font-size: 25px
+}
+
+.food-section .grid .col .card.b-none {
+    border: none;
+    padding: 0px
+}
+
+.food-section .grid .col .card .form-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px
+}
+
+.food-section .grid .col .card .form-block:not(:last-child) {
+    margin-bottom: calc(15px + 5*(100vw - 320px)/1600)
+}
+
+.food-section .grid .col .card .form-block select,
+.food-section .grid .col .card .form-block input {
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 21px
+}
+
+.food-section .grid .col .card .form-block a {
+    border: 1px solid #222;
+    padding: 10px 20px;
+    text-align: center;
+    color: #222
+}
+
+.pagination-section {
+    width: 100%;
+    padding: 50px 20px
+}
+
+.pagination-section .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 30px
+}
+
+@media screen and (max-width: 768px) {
+    .pagination-section .grid {
+        grid-template-columns: 1fr
+    }
+}
+
+.pagination-section .grid .col {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.pagination-section .grid .col select,
+.pagination-section .grid .col button {
+    font-size: 20px;
+    padding: 2px 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 1px solid #222;
+    background: rgba(0, 0, 0, 0)
+}
+
+.pagination-section .grid .col .text {
+    font-size: 20px
+}
+
+.pagination-section .grid .col:nth-child(2) {
+    text-align: right;
+    justify-content: flex-end
+}
+
+@media screen and (max-width: 768px) {
+    .pagination-section .grid .col:nth-child(2) {
+        justify-content: flex-start
+    }
+}
+
+.footer-section {
+    padding: 20px
+}
+
+.footer-section .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid #222
+}
+
+@media screen and (max-width: 1024px) {
+    .footer-section .grid {
+        grid-template-columns: 1fr
+    }
+}
+
+.footer-section .grid .col {
+    padding: calc(20px + 30*(100vw - 320px)/1600)
+}
+
+.footer-section .grid .col .card .title {
+    font-size: calc(30px + 15*(100vw - 320px)/1600);
+    margin-top: 0px;
+    text-transform: uppercase
+}
+
+.footer-section .grid .col .card .inline {
+    display: flex;
+    flex-direction: column;
+    gap: calc(15px + 5*(100vw - 320px)/1600)
+}
+
+.footer-section .grid .col .card .inline a {
+    color: #222;
+    font-size: 21px
+}
+
+.footer-section .grid .col .card .text {
+    font-size: calc(18px + 3*(100vw - 320px)/1600)
+}
+
+.footer-section .grid .col .card .form {
+    display: flex
+}
+
+@media screen and (max-width: 1200px) {
+    .footer-section .grid .col .card .form {
+        flex-direction: column;
+        gap: 20px
+    }
+}
+
+.footer-section .grid .col .card .form input[type=email] {
+    flex-basis: 100%
+}
+
+.footer-section .grid .col .card .form input {
+    padding: 15px 30px;
+    font-size: calc(18px + 3*(100vw - 320px)/1600);
+    border: 1px solid #222
+}
+
+@media screen and (max-width: 768px) {
+    .footer-section .grid .col .card .form input {
+        padding: 15px
+    }
+}
+
+.footer-section .grid .col .card .form input[type=submit] {
+    background: #222;
+    cursor: pointer;
+    color: #fff
+}
+
+.footer-section .grid .col:first-child {
+    grid-row: 1/3;
+    border-right: 1px solid #222
+}
+
+@media screen and (max-width: 1024px) {
+    .footer-section .grid .col:first-child {
+        grid-row: unset;
+        border-right: none
+    }
+}
+
+.footer-section .grid .col:first-child .card .inline a {
+    font-size: calc(30px + 45*(100vw - 320px)/1600);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke: 1px #000;
+    line-height: 1
+}
+
+.footer-section .grid .col:first-child .card .inline a::before {
+    position: absolute;
+    content: attr(data-text);
+    top: 0;
+    left: 0px;
+    -webkit-text-fill-color: #ff5722;
+    width: 100%;
+    overflow: hidden;
+    transition: .5s
+}
+
+.footer-section .grid .col:first-child .card .inline a:hover {
+    -webkit-text-fill-color: #ff5722
+}
+
+.footer-section .grid .col:nth-child(2),
+.footer-section .grid .col:nth-child(3) {
+    border-bottom: 1px solid #222
+}
+
+.footer-section .grid .col:nth-child(2),
+.footer-section .grid .col:nth-child(4) {
+    border-right: 1px solid #222
+}
+
+@media screen and (max-width: 1024px) {
+
+    .footer-section .grid .col:nth-child(2),
+    .footer-section .grid .col:nth-child(4) {
+        border-right: none
+    }
+}
+
+.footer-section .grid .col .card {
+    position: unset;
+    border: unset
+}
+
+.about-section {
+    width: 100%;
+    padding: 20px
+}
+
+.about-section .grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px
+}
+
+@media screen and (max-width: 768px) {
+    .about-section .grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .about-section .grid {
+        grid-template-columns: repeat(1, 1fr)
+    }
+}
+
+.about-section .grid .col {
+    border: 1px solid #d3d3d3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+
+.about-section .grid .col .img {
+    width: 100%;
+    height: 100%
+}
+
+.about-section .grid .col .img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.about-section .grid .col .title {
+    font-size: calc(25px + 40*(100vw - 320px)/1600);
+    margin: 0px;
+    padding: calc(20px + 10*(100vw - 320px)/1600)
+}
+
+.about-section .grid .col .text {
+    font-size: 25px;
+    margin: 0px;
+    padding: 30px
+}
+
+.about-section .grid .col.last-col {
+    grid-column: 2/4
+}
+
+@media screen and (max-width: 768px) {
+    .about-section .grid .col.last-col {
+        grid-column: unset
+    }
+}
+
+.about-section .grid .col.third-col {
+    grid-row: 2/3;
+    grid-column: 4/5
+}
+
+@media screen and (max-width: 768px) {
+    .about-section .grid .col.third-col {
+        grid-column: unset;
+        grid-row: unset
+    }
+}
+
+.about-section .grid .col.second-col {
+    grid-column: 3/5
+}
+
+@media screen and (max-width: 768px) {
+    .about-section .grid .col.second-col {
+        grid-column: unset;
+        grid-row: unset
+    }
+}
+
+.about-section .grid .col.first-col {
+    grid-row: 1/3;
+    grid-column: 1/2
+}
+
+@media screen and (max-width: 768px) {
+    .about-section .grid .col.first-col {
+        grid-column: unset;
+        grid-row: unset
+    }
+}
+
+.unique-section {
+    width: 100%;
+    height: 100%;
+    padding: 20px
+}
+
+.unique-section .grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px
+}
+
+@media screen and (max-width: 768px) {
+    .unique-section .grid {
+        grid-template-columns: 1fr
+    }
+}
+
+.unique-section .grid .col .card .title {
+    font-size: calc(25px + 40*(100vw - 320px)/1600)
+}
+
+.unique-section .grid .col .card .text {
+    font-size: 21px
+}
+
+.unique-section .grid .col .card .img {
+    width: 50%;
+    height: 100%
+}
+
+.unique-section .grid .col .card .img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.unique-section .grid .col:last-child .card {
+    display: flex;
+    gap: 20px
+}
+
+.checkout-section {
+    width: 100%;
+    padding: 20px
+}
+
+.checkout-section .grid {
+    padding: 20px;
+    border: 1px solid #222;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px
+}
+
+@media screen and (max-width: 1024px) {
+    .checkout-section .grid {
+        grid-template-columns: 1fr
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .checkout-section .grid {
+        padding: 0px;
+        border: none
+    }
+}
+
+.checkout-section .grid .col {
+    display: flex;
+    flex-direction: column;
+    gap: 30px
+}
+
+.checkout-section .grid .col p {
+    margin: 0px
+}
+
+.checkout-section .grid .col .card {
+    border: 1px solid #222
+}
+
+.checkout-section .grid .col .card .inline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 21px;
+    padding: 15px;
+    border-bottom: 1px solid #222
+}
+
+.checkout-section .grid .col .card .block {
+    padding: 15px
+}
+
+.checkout-section .grid .col .card .block label {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: calc(22px + 3*(100vw - 320px)/1600);
+    text-transform: capitalize
+}
+
+.checkout-section .grid .col .card .block input,
+.checkout-section .grid .col .card .block select,
+.checkout-section .grid .col .card .block button {
+    padding: 10px 20px;
+    border: 1px solid #222;
+    width: 100%;
+    display: block;
+    font-size: 25px
+}
+
+.checkout-section .grid .col .card .block button {
+    cursor: pointer;
+    background: #222;
+    color: #fff
+}
+
+.checkout-section .grid .col .card .block.inline-block {
+    display: flex;
+    align-items: center
+}
+
+.checkout-section .grid .col .card .block.inline-block label {
+    margin-bottom: 0px
+}
+
+.checkout-section .grid .col .card .block.inline-block input {
+    width: auto;
+    margin-right: 20px
+}
+
+.checkout-section .grid .col .card .block .card-inline {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px
+}
+
+@media screen and (max-width: 768px) {
+    .checkout-section .grid .col .card .block .card-inline {
+        flex-direction: column
+    }
+}
+
+.checkout-section .grid .col .card .block .card-inline .img {
+    max-width: 180px;
+    min-width: 160px
+}
+
+.checkout-section .grid .col .card .block .card-inline .img img {
+    width: 100%;
+    height: 100%
+}
+
+.checkout-section .grid .col .card .block .card-inline .text-block .title {
+    font-size: calc(25px + 20*(100vw - 320px)/1600);
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-transform: capitalize
+}
+
+@media screen and (max-width: 768px) {
+    .checkout-section .grid .col .card .block .card-inline .text-block {
+        margin-bottom: 10px;
+        text-align: center
+    }
+
+    .checkout-section .grid .col .card .block .card-inline .text-block .title {
+        margin-bottom: 10px
+    }
+}
+
+.checkout-section .grid .col .card .block .card-inline .text {
+    font-size: calc(20px + 10*(100vw - 320px)/1600)
+}
+
+.checkout-section .grid .col .card .block .card-inline .price {
+    font-size: calc(30px + 25*(100vw - 320px)/1600)
+}
+
+.checkout-section .grid .col .card .block .card-inline.ml-100 {
+    border-left: 1px solid #222;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px
+}
+
+.checkout-section .grid .col .card .block .card-inline.ml-100 input,
+.checkout-section .grid .col .card .block .card-inline.ml-100 button {
+    padding: 10px 20px;
+    border: 1px solid #222;
+    text-transform: capitalize
+}
+
+@media screen and (max-width: 768px) {
+    .checkout-section .grid .col .card .block .card-inline.ml-100 {
+        border-left: none
+    }
+}
+
+.checkout-section .grid .col .card .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)
+}
+
+@media screen and (max-width: 768px) {
+    .checkout-section .grid .col .card .grid-3 {
+        grid-template-columns: 1fr
+    }
+}
+
+.checkout-section .grid .col .card .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr)
+}
+
+@media screen and (max-width: 768px) {
+    .checkout-section .grid .col .card .grid-2 {
+        grid-template-columns: 1fr
+    }
+}
+
+.checkout-section .grid .col .card .grid-2.border {
+    border: 1px solid #222
+}
+
+.address-section {
+    width: 100%;
+    padding: 50px 20px
+}
+
+.address-section .grid {
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto
+}
+
+.address-section .grid .col .card .title {
+    font-size: 40px
+}
+
+.address-section .grid .col .card .block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.address-section .grid .col .card .block a {
+    color: #222;
+    font-size: 25px
+}
+
+.contact-section {
+    width: 100%;
+    padding: 50px 20px;
+    position: relative
+}
+
+.contact-section .row {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1
+}
+
+.contact-section .row .img {
+    width: 100%;
+    height: 100%
+}
+
+.contact-section .row .img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.contact-section .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 75%;
+    margin: auto
+}
+
+.contact-section .grid .col input,
+.contact-section .grid .col textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #222;
+    font-size: 21px
+}
+
+.contact-section .grid .col:nth-child(5),
+.contact-section .grid .col:last-child {
+    grid-column: 1/3
+}
+
+.faq-section {
+    width: 100%;
+    padding: 50px 20px
+}
+
+.faq-section .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 1px solid #222
+}
+
+.faq-section .grid .card {
+    padding: calc(20px + 30*(100vw - 320px)/1600);
+    display: flex;
+    flex-direction: column;
+    gap: calc(15px + 15*(100vw - 320px)/1600)
+}
+
+.faq-section .grid .card .title {
+    font-size: calc(30px + 15*(100vw - 320px)/1600);
+    margin: 0px;
+    cursor: pointer
+}
+
+.faq-section .grid .card .text {
+    font-size: calc(20px + 5*(100vw - 320px)/1600);
+    margin-bottom: 0px
+}
+
+.faq-section .grid .card:not(:last-child) {
+    border-bottom: 1px solid #222
+}
+
+.not-found-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: calc(20px + 10*(100vw - 320px)/1600)
+}
+
+.not-found-section .title {
+    font-size: calc(25px + 20*(100vw - 320px)/1600);
+    cursor: pointer
+}
+
+.not-found-section .text {
+    font-size: 25px;
+    margin-bottom: 0px
+}
+
+.not-found-section .btn-block a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #222;
+    padding: 20px 30px;
+    border-radius: 5px;
+    font-size: 25px;
+    font-weight: 600;
+    transition: all .3s ease-in-out;
+    text-transform: capitalize
+}
+
+.not-found-section .btn-block a:hover {
+    background-color: #444;
+    transform: scale(1.05)
+}
+
+.menu-section {
+    margin-left: 20%;
+    width: 80%;
+    background: #fff
+}
+
+.menu-section .grid .col {
+    padding: 0px 50px
+}
+
+.menu-section .grid .col .text-center {
+    padding: 30px 50px;
+    border: 1px solid #222;
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center
+}
+
+.menu-section .grid .col .text-center .title {
+    font-size: 45px
+}
+
+.menu-section .grid .col .text-center .text {
+    font-size: 21px
+}
+
+.menu-section .grid .col .title {
+    font-size: 45px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #222
+}
+
+.menu-section .grid .col .inline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 30px
+}
+
+.shop-details-section {
+    width: 100%;
+    padding: 50px 20px
+}
+
+.shop-details-section.d-none {
+    display: none
+}
+
+.shop-details-section.pop-up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 9999;
+    height: 100vh;
+    overflow: auto
+}
+
+.shop-details-section.pop-up .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #222;
+    cursor: pointer;
+    z-index: 999;
+    background: #fff
+}
+
+.shop-details-section .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative
+}
+
+.shop-details-section .grid.grid-2 {
+    grid-template-columns: 1fr 1fr
+}
+
+@media screen and (max-width: 1024px) {
+    .shop-details-section .grid.grid-2 {
+        grid-template-columns: 1fr
+    }
+}
+
+@media(max-width: 1024px) {
+    .shop-details-section .grid {
+        grid-template-columns: 1fr
+    }
+}
+
+.shop-details-section .grid .col .card {
+    padding: calc(20px + 30*(100vw - 320px)/1600)
+}
+
+.shop-details-section .grid .col .card .img {
+    width: 100%;
+    max-height: 70vh
+}
+
+.shop-details-section .grid .col .card .img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.shop-details-section .grid .col .card .text-block .title {
+    font-size: 55px;
+    margin-bottom: calc(30px + 10*(100vw - 320px)/1600)
+}
+
+.shop-details-section .grid .col .card .text-block .m-title {
+    font-size: 30px
+}
+
+.shop-details-section .grid .col .card .text-block .text {
+    font-size: 21px
+}
+
+.shop-details-section .grid .col .card .text-block select {
+    font-size: 21px;
+    padding: 15px 40px
+}
+
+.shop-details-section .grid .col .card .text-block .block {
+    font-size: calc(25px + 5*(100vw - 320px)/1600);
+    padding: 10px 20px;
+    border: 1px solid #222
+}
+
+.shop-details-section .grid .col .card .text-block .block:not(:last-child) {
+    margin-bottom: 10px
+}
+
+.shop-details-section .grid .col .card .text-block .block a {
+    border: 1px solid #222;
+    color: #222;
+    padding: 5px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 22px
+}
+
+.shop-details-section .grid .col .card .btn-block {
+    display: inline-block;
+    margin-top: 50px;
+    width: 100%;
+    text-align: center
+}
+
+.shop-details-section .grid .col .card .btn-block .btn {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #222;
+    padding: 15px 40px;
+    font-size: 21px;
+    color: #222;
+    text-transform: uppercase
+}
+
+/*# sourceMappingURL=main.css.map */
