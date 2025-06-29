@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\SaleController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -34,6 +35,15 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::get('shop/edit/{id}', [ShopController::class, 'edit'])->name('product.edit');
     Route::put('shop/update/{id}', [ShopController::class, 'update'])->name('product.update');
     Route::delete('shop/destroy/{id}', [ShopController::class, 'destroy'])->name('product.destroy');
+
+    /* sale controller */
+    Route::get('sale/index', [SaleController::class, 'index'])->name('sale.index');
+    Route::get('sale/create', [SaleController::class, 'create'])->name('sale.create');
+    Route::post('sale/store', [SaleController::class, 'store'])->name('sale.store');
+    Route::get('sale/show/{id}', [SaleController::class, 'show'])->name('sale.show');
+    Route::get('sale/edit/{id}', [SaleController::class, 'edit'])->name('sale.edit');
+    Route::put('sale/update/{id}', [SaleController::class, 'update'])->name('sale.update');
+    Route::delete('sale/destroy/{id}', [SaleController::class, 'destroy'])->name('sale.destroy');
 });
 
 Route::get('/', function () {

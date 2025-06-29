@@ -15,8 +15,12 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('shop_id')->constrained()->onDelete('cascade');
+            $table->decimal('per_unit_price', 10, 2)->default(0.00);
+            $table->integer('sold_unit')->default(0);
+            $table->decimal('total_amount', 50, 2)->default(0.00);
             $table->decimal('vat', 8, 2)->default(0.00);
             $table->decimal('discount', 8, 2)->default(0.00);
+            $table->string('discount_type')->default('percentage');
             $table->string('status')->default('pending');
             $table->decimal('paid_amount', 10, 2)->default(0.00);
             $table->decimal('due_amount', 10, 2)->default(0.00);
