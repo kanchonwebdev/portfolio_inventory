@@ -46,8 +46,8 @@
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item"><b>Status:</b> {{$collection->status}}</li>
                                     <li class="list-group-item"><b>Quantity:</b> {{$collection->quantity}}</li>
-                                    <li class="list-group-item"><b>Max Order:</b> {{$collection->maxOrder}}</li>
-                                    <li class="list-group-item"><b>Price:</b> {{$collection->price}}</li>
+                                    <li class="list-group-item"><b>Purchase Price:</b> {{$collection->purchase_price}}</li>
+                                    <li class="list-group-item"><b>Sell Price:</b> {{$collection->sell_price}}</li>
                                     <li class="list-group-item"><b>Tag:</b> {{$collection->tag->name}}</li>
                                     <li class="list-group-item"><b>Category:</b> {{$collection->category->name}}</li>
                                 </ul>

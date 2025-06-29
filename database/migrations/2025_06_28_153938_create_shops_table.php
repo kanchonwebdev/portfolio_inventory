@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('image');
             $table->string('quantity');
-            $table->string('maxOrder');
-            $table->string('price');
+            $table->string('purchase_price');
+            $table->string('sell_price');
             $table->text('description');
             $table->string('status')->default('draft');
             $table->timestamps();

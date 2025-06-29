@@ -101,7 +101,9 @@
                                                 <th scope="col">SL</th>
                                                 <th scope="col">Name</th>
                                                 <th scope="col">Status</th>
-                                                <th scope="col">Quantity</th>
+                                                <th scope="col">Opening Stock</th>
+                                                <th scope="col">Sold</th>
+                                                <th scope="col">Rest of Stock</th>
                                                 <th scope="col" class="text-center">Handle</th>
                                             </tr>
                                         </thead>
@@ -112,6 +114,9 @@
                                                     <td>{{ $item->name }}</td>
                                                     <td>{{ $item->status }}</td>
                                                     <td>{{ $item->quantity }}</td>
+                                                    <td>{{ $item->quantity }}</td>
+                                                    <td>{{ $item->quantity }}</td>
+
                                                     <td class="text-center">
                                                         <a href="{{ route('product.show', $item->id) }}"
                                                             class="btn btn-info text-white">View</a>

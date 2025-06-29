@@ -89,13 +89,13 @@
                                         </div>
 
                                         <div class="col-md-6">
-                                            <label for="maxOrder" class="form-label">Max Order</label>
-                                            <input type="text" class="form-control" value="{{ $collection->maxOrder }}" name="maxOrder" id="maxOrder">
+                                            <label for="purchase_price" class="form-label">Purchase Price</label>
+                                            <input type="text" class="form-control" value="{{ $collection->purchase_price }}" name="purchase_price" id="purchase_price">
                                         </div>
 
                                         <div class="col-md-6">
-                                            <label for="price" class="form-label">Price</label>
-                                            <input type="text" class="form-control" value="{{ $collection->price }}" name="price" id="price">
+                                            <label for="sell_price" class="form-label">Sell Price</label>
+                                            <input type="text" class="form-control" value="{{ $collection->sell_price }}" name="sell_price" id="sell_price">
                                         </div>
 
                                         <div class="col-md-6">

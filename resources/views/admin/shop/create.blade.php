@@ -81,18 +81,18 @@
                                         </div>
 
                                         <div class="col-md-6">
-                                            <label for="quantity" class="form-label">Quantity</label>
+                                            <label for="quantity" class="form-label">Unit</label>
                                             <input type="text" class="form-control" name="quantity" id="quantity">
                                         </div>
 
                                         <div class="col-md-6">
-                                            <label for="maxOrder" class="form-label">Max Order</label>
-                                            <input type="text" class="form-control" name="maxOrder" id="maxOrder">
+                                            <label for="purchase_price" class="form-label">Purchase Price</label>
+                                            <input type="text" class="form-control" name="purchase_price" id="purchase_price">
                                         </div>
 
                                         <div class="col-md-6">
-                                            <label for="price" class="form-label">Price</label>
-                                            <input type="text" class="form-control" name="price" id="price">
+                                            <label for="sell_price" class="form-label">Sell Price</label>
+                                            <input type="text" class="form-control" name="sell_price" id="sell_price">
                                         </div>
 
                                         <div class="col-md-6">
