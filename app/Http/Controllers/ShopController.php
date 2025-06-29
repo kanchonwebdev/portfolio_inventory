@@ -50,7 +50,7 @@ class ShopController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:1024',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:1024',
             'quantity' => 'required|integer',
             'purchase_price' => 'required|numeric',
             'sell_price' => 'required|numeric',
