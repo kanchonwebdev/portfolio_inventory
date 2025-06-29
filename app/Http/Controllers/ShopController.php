@@ -60,6 +60,8 @@ class ShopController extends Controller
             'tag_id' => 'required|exists:tags,id',
         ]);
 
+        dd($request->all());
+
         $data = $request->except('image');
 
         if ($request->hasFile('image')) {
