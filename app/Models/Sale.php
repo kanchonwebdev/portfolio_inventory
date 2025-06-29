@@ -15,6 +15,7 @@ class Sale extends Model
         'vat',
         'discount',
         'discount_type',
+        'per_unit_expense',
         'status',
         'paid_amount',
         'due_amount',

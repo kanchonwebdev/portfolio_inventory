@@ -83,6 +83,12 @@
                                             </select>
                                         </div>
 
+                                        <div class="col-md-12">
+                                            <label for="per_unit_expense" class="form-label">Per unit expense</label>
+                                            <input type="number" class="form-control" readonly min="0" name="per_unit_expense"
+                                                id="per_unit_expense">
+                                        </div>
+
                                         <div class="col-md-6">
                                             <label for="purchase_price" class="form-label">Purchase price</label>
                                             <input type="number" class="form-control" readonly min="0" name="purchase_price"
@@ -202,6 +208,8 @@
                     data: { product_id: product_id },
                     dataType: 'json',
                     success: function (data) {
+
+                        console.log(data.shop);
                         $('#per_unit_price').val(data.shop.sell_price);
                         $('#sold_unit').val(1);
                         $('#total_amount').val(data.shop.sell_price);
@@ -211,6 +219,7 @@
                         $('#vat').val(0);
                         $('#purchase_price').val(data.shop.purchase_price);
                         $('#quantity').val(data.shop.quantity);
+                        $('#per_unit_expense').val(data.shop.expense ? data.shop.expense.total_cost : 0);
 
                         $('#create_sale').attr('disabled', false).text('Create Sale');
                     }

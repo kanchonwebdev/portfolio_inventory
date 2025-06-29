@@ -5,6 +5,8 @@ use App\Http\Controllers\TagController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\SaleController;
+use App\Http\Controllers\FinancereportController;
+use App\Http\Controllers\ExpenseController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -44,6 +46,18 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::get('sale/edit/{id}', [SaleController::class, 'edit'])->name('sale.edit');
     Route::put('sale/update/{id}', [SaleController::class, 'update'])->name('sale.update');
     Route::delete('sale/destroy/{id}', [SaleController::class, 'destroy'])->name('sale.destroy');
+
+    /* finance report controller */
+    Route::get('report/index', [FinancereportController::class, 'index'])->name('report.index');
+
+    /* expense controller */
+    Route::get('expense/index', [ExpenseController::class, 'index'])->name('expense.index');
+    Route::get('expense/create', [ExpenseController::class, 'create'])->name('expense.create');
+    Route::post('expense/store', [ExpenseController::class, 'store'])->name('expense.store');
+    Route::get('expense/show/{id}', [ExpenseController::class, 'show'])->name('expense.show');
+    Route::get('expense/edit/{id}', [ExpenseController::class, 'edit'])->name('expense.edit');
+    Route::put('expense/update/{id}', [ExpenseController::class, 'update'])->name('expense.update');
+    Route::delete('expense/destroy/{id}', [ExpenseController::class, 'destroy'])->name('expense.destroy');
 });
 
 Route::get('/', function () {

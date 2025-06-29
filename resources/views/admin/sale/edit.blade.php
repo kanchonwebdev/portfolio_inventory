@@ -201,14 +201,6 @@
 
             $('#sold_unit, #vat, #discount, #discount_type').on('input change', recalculateTotals);
 
-            $('#paid_amount').on('input', function (e) {
-                var total_amount = parseFloat($('#total_amount').val()) || 0;
-                var paid_amount = parseFloat(e.target.value) || 0;
-
-                $('#paid_amount').val(paid_amount);
-                $('#due_amount').val((total_amount - paid_amount).toFixed(2));
-            });
-
             $('form').on('keypress', function (e) {
                 if (e.keyCode === 13) {
                     e.preventDefault();

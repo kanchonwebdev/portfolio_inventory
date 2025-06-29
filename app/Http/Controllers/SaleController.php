@@ -27,7 +27,7 @@ class SaleController extends Controller
     public function store(Request $request)
     {
         if ($request->ajax()) {
-            $shop = Shop::find($request->product_id);
+            $shop = Shop::with('expense')->find($request->product_id);
 
             return response()->json([
                 'shop' => $shop
@@ -43,6 +43,7 @@ class SaleController extends Controller
             'discount' => 'required|numeric|min:0',
             'discount_type' => 'required|in:percentage,fixed',
             'paid_amount' => 'required|numeric|min:0',
+            'per_unit_expense' => 'required|numeric|min:0',
         ]);
 
         $discount = $request->discount_type === 'percentage'

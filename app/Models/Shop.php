@@ -27,4 +27,9 @@ class Shop extends Model
     {
         return $this->belongsTo(Tag::class);
     }
+
+    public function expense()
+    {
+        return $this->hasOne(Expense::class);
+    }
 }

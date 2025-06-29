@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-body">
             <h1 style="font-size: 35px">
-                E-Commerce
+                Inventory Soft
                 <span style="font-size: 20px;" class="d-block">New Group</span>
             </h1>
         </div>
@@ -23,6 +23,12 @@
             </li>
             <li class="list-group-item">
                 <a href="{{ route('sale.index') }}">Sale</a>
+            </li>
+            <li class="list-group-item">
+                <a href="{{ route('report.index') }}">Finance Report</a>
+            </li>
+            <li class="list-group-item">
+                <a href="{{ route('expense.index') }}">Expense</a>
             </li>
         </ul>
     </div>

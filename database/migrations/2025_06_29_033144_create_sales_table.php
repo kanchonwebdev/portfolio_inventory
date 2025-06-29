@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('discount_type')->default('percentage');
             $table->string('status')->default('pending');
             $table->decimal('paid_amount', 10, 2)->default(0.00);
+            $table->decimal('per_unit_expense', 10, 2)->default(0.00);
             $table->decimal('due_amount', 10, 2)->default(0.00);
             $table->string('sale_by')->nullable();
             $table->timestamps();
