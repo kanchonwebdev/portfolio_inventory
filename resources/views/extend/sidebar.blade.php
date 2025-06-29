@@ -22,7 +22,7 @@
                 <a href="{{ route('tag.index') }}">Tag</a>
             </li>
             <li class="list-group-item">
-                <a href="{{ route('order.index') }}">Order</a>
+                <a href="{{ route('sale.index') }}">Sale</a>
             </li>
         </ul>
     </div>
