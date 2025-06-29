@@ -7,6 +7,7 @@ use App\Models\Shop;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class SaleController extends Controller
 {
@@ -71,7 +72,11 @@ class SaleController extends Controller
             'sale_by' => Auth::user()->name,
         ]);
 
-        Shop::where('id', $request->shop_id)->decrement('quantity', $request->sold_unit);
+        Shop::where('id', $request->shop_id)->update([
+            'quantity' => DB::raw('quantity - ' . (int) $request->sold_unit),
+            'sold_unit' => DB::raw('sold_unit + ' . (int) $request->sold_unit),
+        ]);
+
 
         return redirect()->route('sale.index')->with('success', 'Sale created successfully.');
     }

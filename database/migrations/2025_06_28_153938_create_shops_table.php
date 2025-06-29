@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('quantity');
             $table->decimal('purchase_price', 10, 2);
             $table->decimal('sell_price', 10, 2);
+            $table->string('sold_unit')->default(0);
             $table->text('description');
             $table->string('status')->default('draft');
             $table->timestamps();

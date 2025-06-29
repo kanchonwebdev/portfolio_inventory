@@ -61,11 +61,11 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
 });
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('admin.welcome');
+})->middleware(['auth', 'verified']);
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('admin.welcome');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {

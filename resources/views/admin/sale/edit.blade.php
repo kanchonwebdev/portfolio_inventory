@@ -192,8 +192,13 @@
                 var discounted_total = total_amount - updated_discount;
                 var updated_total = discounted_total + (discounted_total * (vat / 100));
 
+                if (paid_amount >= updated_total) {
+                    $('#due_amount').val(0);
+                } else {
+                    $('#due_amount').val((updated_total - paid_amount).toFixed(2));
+                }
+
                 $('#total_amount').val(updated_total.toFixed(2));
-                $('#due_amount').val((updated_total - paid_amount).toFixed(2));
                 $('#paid_amount').val(paid_amount);
                 $('#discount').val(discount);
                 $('#vat').val(vat);

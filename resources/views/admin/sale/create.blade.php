@@ -85,19 +85,20 @@
 
                                         <div class="col-md-12">
                                             <label for="per_unit_expense" class="form-label">Per unit expense</label>
-                                            <input type="number" class="form-control" readonly min="0" name="per_unit_expense"
-                                                id="per_unit_expense">
+                                            <input type="number" class="form-control" readonly min="0"
+                                                name="per_unit_expense" id="per_unit_expense">
                                         </div>
 
                                         <div class="col-md-6">
                                             <label for="purchase_price" class="form-label">Purchase price</label>
-                                            <input type="number" class="form-control" readonly min="0" name="purchase_price"
-                                                id="purchase_price">
+                                            <input type="number" class="form-control" readonly min="0"
+                                                name="purchase_price" id="purchase_price">
                                         </div>
 
                                         <div class="col-md-6">
                                             <label for="quantity" class="form-label">Available quantity</label>
-                                            <input type="number" class="form-control" readonly min="0" name="quantity" id="quantity">
+                                            <input type="number" class="form-control" readonly min="0" name="quantity"
+                                                id="quantity">
                                         </div>
 
                                         <div class="col-md-6">
@@ -189,8 +190,13 @@
                 var discounted_total = total_amount - updated_discount;
                 var updated_total = discounted_total + (discounted_total * (vat / 100));
 
+                if(paid_amount >= updated_total) {
+                    $('#due_amount').val(0);
+                } else {
+                    $('#due_amount').val((updated_total - paid_amount).toFixed(2));
+                }
+
                 $('#total_amount').val(updated_total.toFixed(2));
-                $('#due_amount').val((updated_total - paid_amount).toFixed(2));
                 $('#paid_amount').val(paid_amount);
                 $('#discount').val(discount);
                 $('#vat').val(vat);
@@ -233,7 +239,12 @@
                 var paid_amount = parseFloat(e.target.value) || 0;
 
                 $('#paid_amount').val(paid_amount);
-                $('#due_amount').val((total_amount - paid_amount).toFixed(2));
+                if (paid_amount >= total_amount) {
+                    $('#due_amount').val(0);
+                }
+                else {
+                    $('#due_amount').val((total_amount - paid_amount).toFixed(2));
+                }
             });
 
             $('form').on('keypress', function (e) {

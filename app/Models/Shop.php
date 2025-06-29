@@ -14,6 +14,7 @@ class Shop extends Model
         'sell_price',
         'description',
         'status',
+        'sold_unit',
         'category_id',
         'tag_id',
     ];

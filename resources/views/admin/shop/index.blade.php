@@ -113,8 +113,8 @@
                                                     <th scope="row">{{ $index + 1 }}</th>
                                                     <td>{{ $item->name }}</td>
                                                     <td>{{ $item->status }}</td>
-                                                    <td>{{ $item->quantity }}</td>
-                                                    <td>{{ $item->quantity }}</td>
+                                                    <td>{{ $item->sold_unit + $item->quantity }}</td>
+                                                    <td>{{ $item->sold_unit }}</td>
                                                     <td>{{ $item->quantity }}</td>
 
                                                     <td class="text-center">
